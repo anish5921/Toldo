@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .column1, .column2 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .toldo {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+  .toldo {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+.column1 {
+  float: left;
+  width: 15%;
+  padding: 10px;
+  height: 100%;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column2 {
+  float: right;
+  width: 85%;
+  padding: 10px;
+  height: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.movie-container {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+}
+
+.movie-container select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 5px 15px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
+}
+
+.toldo {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.white {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blue {
+  background-color: #0081cb;
+  color: #000000;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.red {
+  background-color: #e40f0f;
+  color: #000000;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.toldo.available {
+  background-color: #ffffff !important;
+}
+
+.toldo.occupied {
+  background-color: #e40f0f !important;
+}
+
+.toldo.reserved {
+  background-color: #0081cb !important;
+}
+
+.toldo:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .toldo:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.toldo.occupied:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .toldo.occupied:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.toldo.passante:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+  
+.showcase .toldo.passante:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #777;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase1 {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+p.text {
+  margin: 40px 0;
+}
+
+p.text span {
+  color: #0081cb;
+  font-weight: 600;
+  box-sizing: content-box;
+}
+
+.button {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.buttonSave {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #4CAF50;
+  color: white; 
+  border: none; 
+  cursor: pointer;
+}
+
+.buttonCancel {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #f44336;
+  color: white; 
+  border: none; 
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+.button-container .button a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.button-container .buttonSave a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.button-container .buttonCancel a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.input {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.text-field {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.underline {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
